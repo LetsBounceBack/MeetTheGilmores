@@ -147,16 +147,18 @@ export default function App() {
 
         <div className="relative z-10 text-center text-white px-4">
           <h1 className="font-serif text-6xl md:text-8xl mb-4">
-            Bride & Groom
+            Lexi & Austin
           </h1>
           <div className="flex items-center justify-center gap-4 mb-6">
             <div className="h-px w-16 bg-white/50"></div>
             <Heart className="w-6 h-6 fill-white" />
             <div className="h-px w-16 bg-white/50"></div>
           </div>
-          <p className="text-2xl md:text-3xl mb-2">Save the Date</p>
+          <p className="text-2xl md:text-3xl mb-2 uppercase">
+            we're getting married!
+          </p>
           <p className="text-xl md:text-2xl text-white/90">
-            [Date] | [Venue Name]
+            10.08.26 | Lewisville, TX
           </p>
 
           <button
@@ -172,8 +174,8 @@ export default function App() {
       <section id="event-details" className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl md:text-5xl text-neutral-800 mb-4">
-              Event Details
+            <h2 className="font-serif text-4xl md:text-5xl text-neutral-800 mb-4 uppercase">
+              our special day
             </h2>
             <div className="flex items-center justify-center gap-4 mb-6">
               <div className="h-px w-12 bg-rose-300"></div>
@@ -184,7 +186,7 @@ export default function App() {
 
           <div className="grid md:grid-cols-2 gap-12">
             {/* Ceremony */}
-            <div className="bg-neutral-50 p-8 rounded-lg">
+            {/* <div className="bg-neutral-50 p-8 rounded-lg">
               <div className="flex items-center gap-3 mb-4">
                 <Calendar className="w-6 h-6 text-rose-500" />
                 <h3 className="text-2xl font-serif text-neutral-800">
@@ -210,7 +212,7 @@ export default function App() {
                   comfortably!
                 </p>
               </div>
-            </div>
+            </div> */}
 
             {/* Reception */}
             <div className="bg-neutral-50 p-8 rounded-lg">
@@ -221,10 +223,14 @@ export default function App() {
                 </h3>
               </div>
               <p className="text-neutral-600 mb-2">
-                <strong>Location:</strong> Indoor Reception at [Venue]
+                <strong>Venue:</strong> The Mill Street House
+              </p>
+              <p className="text-neutral-600 mb-2">
+                <strong>Address:</strong> 322 N Mill St, Lewisville, TX 75057
+                (hyperlink this)
               </p>
               <p className="text-neutral-600 mb-4">
-                <strong>Time:</strong> Cocktails and dinner to follow ceremony
+                <strong>Time:</strong> 5:30-8PM
               </p>
 
               <div className="space-y-3 mt-6">
@@ -232,25 +238,79 @@ export default function App() {
                 <ul className="space-y-2 text-neutral-600">
                   <li className="flex items-start gap-2">
                     <span className="text-rose-500">•</span>
+                    <span>Arrival</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-rose-500">•</span>
+                    <span>Dinner, Cake Cutting and Desert</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-rose-500">•</span>
                     <span>
-                      Processional (officiant, groom, flower girl, ring bearer,
-                      bride with escort)
+                      Get to Know Us As the Gilmores (Interactive Game)
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-rose-500">•</span>
-                    <span>Ceremony</span>
+                    <span>Dance, Mingle and Take Pictures</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-rose-500">•</span>
-                    <span>Recessional</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-rose-500">•</span>
-                    <span>Reception (dinner and celebration)</span>
+                    <span>Farewell/Departure</span>
                   </li>
                 </ul>
               </div>
+            </div>
+
+            <div className="bg-neutral-50 p-8 rounded-lg">
+              <div className="flex items-center gap-3 mb-4">
+                <MapPin className="w-6 h-6 text-rose-500" />
+                <h3 className="text-2xl font-serif text-neutral-800">Menu</h3>
+              </div>
+              <p className="text-neutral-600 mb-2">
+                <strong>Catering Provided by:</strong> Olive Garden
+              </p>
+              <p className="text-neutral-600 mb-2">
+                <strong>Appetizers:</strong> Charcuterie Board + Fruit Platter
+              </p>
+              <p className="text-neutral-600 mb-2">
+                <strong>Drinks:</strong>
+                <ul className="space-y-2 text-neutral-600">
+                  <li className="flex items-start gap-2">
+                    <span className="text-rose-500">•</span>
+                    <span>Water With Sliced Lemon</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-rose-500">•</span>
+                    <span>Sodas (Coke and Sprite)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-rose-500">•</span>
+                    <span>Red and White Wine</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-rose-500">•</span>
+                    <span>Rasberry Iced Tea</span>
+                  </li>
+                </ul>
+              </p>
+              <p className="text-neutral-600 mb-2">
+                <strong>Deserts:</strong>
+                <ul className="space-y-2 text-neutral-600">
+                  <li className="flex items-start gap-2">
+                    <span className="text-rose-500">•</span>
+                    <span>Rasberry Vanilla Cake</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-rose-500">•</span>
+                    <span>Vanilla Sheet Cake</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-rose-500">•</span>
+                    <span>Cookies Assortment</span>
+                  </li>
+                </ul>
+              </p>
             </div>
 
             {/* Dress Code */}
@@ -259,24 +319,15 @@ export default function App() {
                 Dress Code
               </h3>
               <p className="text-neutral-600 mb-2">
-                We kindly ask guests to wear <strong>[Dress Code]</strong>. Feel
-                free to follow along with the color theme.
+                We kindly ask guests to wear whatever they feel comfortable in
+                especailly if you'd like to dance.
+              </p>
+              <p className="text-neutral-600 mb-2">
+                Feel free to follow along with the color theme (Our website
+                colors)
               </p>
               <p className="text-rose-600 font-semibold">
-                No jeans or white, please.
-              </p>
-            </div>
-
-            {/* Non-Traditional Note */}
-            <div className="bg-rose-50 p-8 rounded-lg md:col-span-2 border border-rose-200">
-              <h3 className="text-2xl font-serif text-neutral-800 mb-4">
-                Our Non-Traditional Celebration
-              </h3>
-              <p className="text-neutral-700">
-                We did not have a bridal/wedding party. The immediate family
-                will walk in for the ceremony in any order and sit in the first
-                2 rows. Once everyone has been seated, the officiant will arrive
-                to begin the ceremony.
+                No white clothing, please.
               </p>
             </div>
           </div>
@@ -304,23 +355,36 @@ export default function App() {
                 Parking
               </h3>
               <p className="text-neutral-600">
-                Parking is available on-site and is free for all guests.
+                Parking is available on-site and is free for all guests. (insert
+                map)
               </p>
             </div>
 
             <div className="bg-white p-8 rounded-lg shadow-sm">
               <Calendar className="w-8 h-8 text-rose-500 mb-4" />
               <h3 className="text-2xl font-serif text-neutral-800 mb-4">
-                Nearby Airports
+                Nearby Airport
               </h3>
               <p className="text-neutral-600 mb-2">
-                <strong>Closest Airport:</strong> [Airport Name]
+                <strong>Closest Airport:</strong> DFW International
               </p>
-              <p className="text-neutral-600 mb-4">About [X] minutes away</p>
+              <p className="text-neutral-600 mb-4">About 20 minutes away</p>
+            </div>
+
+            <div className="bg-white p-8 rounded-lg shadow-sm">
+              <Calendar className="w-8 h-8 text-rose-500 mb-4" />
+              <h3 className="text-2xl font-serif text-neutral-800 mb-4">
+                Nearby Hotels
+              </h3>
               <p className="text-neutral-600 mb-2">
-                <strong>Alternative Airport:</strong> [Airport Name]
+                There are many hotel options within the city of Lewisville, TX:{" "}
+                <a
+                  className="underline"
+                  href="https://www.google.com/travel/search?q=hotels%20near%20lewisville%20texas&g2lb=4899571%2C4899572%2C4965990%2C72471280%2C72560029%2C72573224%2C72647020%2C72686036%2C72803964%2C72882230%2C73059275%2C73064764%2C100361027%2C121608706&hl=en-US&gl=us&cs=1&ssta=1&ts=CAESCgoCCAMKAggDEAAaHBIaEhQKBwjqDxAFGAsSBwjqDxAFGAwYATICEAAqBwoFOgNVU0Q&qs=CAE4BkIJEe6K1wKuq1ogQgkRlvwgsv0SJV1CCRGIj5v6-6khYFpWMlSqAVEQASoKIgZob3RlbHMoADIfEAEiG1OXrh-RTfiRXDKAqlt59P6W1vS1T2TI4vdzMTIgEAIiHGhvdGVscyBuZWFyIGxld2lzdmlsbGUgdGV4YXM&ap=aAE&ictx=111&ved=0CAAQ5JsGahcKEwiQsci92ayUAxUAAAAAHQAAAAAQDA"
+                >
+                  View Here
+                </a>
               </p>
-              <p className="text-neutral-600">About [X] minutes away</p>
             </div>
           </div>
         </div>
@@ -410,34 +474,32 @@ export default function App() {
                 Will alcohol be served?
               </h3>
               <p className="text-neutral-600 mb-2">
-                Yes! We'll be serving beer, wine, and signature cocktails
-                throughout the evening.
-              </p>
-              <p className="text-sm text-neutral-500 italic">
-                Or: No. Our wedding will be BYOB for Alcohol. Alcohol-free
-                drinks will be provided.
+                Yes! We will only be serving wine throughout the evening. Hard
+                liquor will not be provided and is not allowed on site.
               </p>
             </div>
 
             {/* Photography */}
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold text-neutral-800 mb-2">
-                Can I take photos during the ceremony?
+                Can I take photos during the party?
               </h3>
               <p className="text-neutral-600 mb-3">
-                Yes, you can. Please be mindful of any flashes or sounds that
-                may happen when taking pictures.
+                Yes, please take a lot and send them to us! We will also have
+                disposable film cameras that we encourage you to use. We want to
+                print these after!
               </p>
               <div className="bg-rose-50 p-4 rounded border-l-4 border-rose-400">
                 <p className="text-sm text-neutral-700">
                   <strong>Share your photos!</strong> Please send any pictures
                   you take to the bride & groom at:{" "}
                   <a
-                    href="mailto:[email]"
-                    className="text-rose-600 hover:underline"
+                    href="mailto:meetthegilmores26@gmail.com"
+                    className="text-rose-600 underline"
                   >
-                    [email@gmail.com]
+                    meetthegilmores26@gmail.com
                   </a>
+                  &nbsp;or send it to our personal number.
                 </p>
               </div>
             </div>
@@ -448,7 +510,7 @@ export default function App() {
                 Are children invited?
               </h3>
               <p className="text-neutral-600">
-                While we love your little ones, we are keeping our wedding an{" "}
+                While we love your little ones, we are keeping our party an{" "}
                 <strong>adults-only celebration</strong> (except immediate
                 family).
               </p>
@@ -459,8 +521,7 @@ export default function App() {
                 Can I bring a plus-one?
               </h3>
               <p className="text-neutral-600">
-                If your digital invitation includes "and guest," then yes.
-                Otherwise, we are keeping our guest list intimate.
+                Yes, please RSVP and limit it to only one additional member.
               </p>
             </div>
           </div>
@@ -480,98 +541,20 @@ export default function App() {
               <div className="h-px w-12 bg-rose-300"></div>
             </div>
             <p className="text-neutral-600">
-              We can't wait to celebrate with you! Please RSVP by [Date].
+              We can't wait to celebrate with you! Please RSVP by August 31st.
             </p>
           </div>
 
-          <form className="bg-neutral-50 p-8 rounded-lg space-y-6">
-            <div>
-              <label className="block text-neutral-700 mb-2 font-semibold">
-                Full Name(s)
-              </label>
-              <input
-                type="text"
-                className="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-rose-500"
-                placeholder="Enter your name(s)"
-              />
-            </div>
-
-            <div>
-              <label className="block text-neutral-700 mb-2 font-semibold">
-                Email Address
-              </label>
-              <input
-                type="email"
-                className="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-rose-500"
-                placeholder="your@email.com"
-              />
-            </div>
-
-            <div>
-              <label className="block text-neutral-700 mb-2 font-semibold">
-                Will you be attending?
-              </label>
-              <div className="space-y-3">
-                <label className="flex items-center gap-3 p-3 bg-white rounded-lg cursor-pointer hover:bg-rose-50 transition-colors">
-                  <input
-                    type="radio"
-                    name="attending"
-                    value="yes"
-                    className="w-4 h-4 text-rose-500"
-                  />
-                  <span className="text-neutral-700">Joyfully accepts</span>
-                </label>
-                <label className="flex items-center gap-3 p-3 bg-white rounded-lg cursor-pointer hover:bg-rose-50 transition-colors">
-                  <input
-                    type="radio"
-                    name="attending"
-                    value="no"
-                    className="w-4 h-4 text-rose-500"
-                  />
-                  <span className="text-neutral-700">Regretfully declines</span>
-                </label>
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-neutral-700 mb-2 font-semibold">
-                Number of Guests
-              </label>
-              <input
-                type="number"
-                min="1"
-                className="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-rose-500"
-                placeholder="1"
-              />
-            </div>
-
-            <div>
-              <label className="block text-neutral-700 mb-2 font-semibold">
-                Dietary Restrictions
-              </label>
-              <textarea
-                className="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-rose-500 h-24"
-                placeholder="Please list any dietary restrictions or allergies..."
-              ></textarea>
-            </div>
-
-            <div>
-              <label className="block text-neutral-700 mb-2 font-semibold">
-                Special Message (Optional)
-              </label>
-              <textarea
-                className="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-rose-500 h-24"
-                placeholder="Send the couple a message..."
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              className="w-full bg-rose-500 text-white py-4 rounded-full hover:bg-rose-600 transition-colors font-semibold text-lg"
-            >
-              Submit RSVP
-            </button>
-          </form>
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSeKsbGHrfiX1d_1VOWi6jt-_w1mpYEQOI9NmIXGPP6JGwHsfg/viewform?embedded=true"
+            width="640"
+            height="1108"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+          >
+            Loading…
+          </iframe>
         </div>
       </section>
 
@@ -579,17 +562,8 @@ export default function App() {
       <footer className="bg-neutral-800 text-white py-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Heart className="w-8 h-8 text-rose-400 fill-rose-400 mx-auto mb-4" />
-          <p className="text-xl font-serif mb-2">Bride & Groom</p>
-          <p className="text-neutral-400 mb-4">[Date] | [Location]</p>
-          <div className="flex items-center justify-center gap-2 text-sm text-neutral-500">
-            <Mail className="w-4 h-4" />
-            <a
-              href="mailto:[email]"
-              className="hover:text-rose-400 transition-colors"
-            >
-              [email@gmail.com]
-            </a>
-          </div>
+          <p className="text-xl font-serif mb-2">Lexi & Austin</p>
+          <p className="text-neutral-400 mb-4">10.08.26 | Lewisville, TX</p>
           <p className="text-neutral-500 text-sm mt-8">
             We can't wait to celebrate with you!
           </p>
