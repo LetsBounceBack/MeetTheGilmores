@@ -12,10 +12,8 @@ import {
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("home");
 
   const scrollToSection = (sectionId: string) => {
-    setActiveSection(sectionId);
     setMobileMenuOpen(false);
     const element = document.getElementById(sectionId);
     if (element) {
