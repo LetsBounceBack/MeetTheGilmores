@@ -549,9 +549,7 @@ export default function App() {
             src="https://docs.google.com/forms/d/e/1FAIpQLSeKsbGHrfiX1d_1VOWi6jt-_w1mpYEQOI9NmIXGPP6JGwHsfg/viewform?embedded=true"
             width="640"
             height="1108"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
+            style={{ border: 0, margin: 0 }}
           >
             Loading…
           </iframe>
