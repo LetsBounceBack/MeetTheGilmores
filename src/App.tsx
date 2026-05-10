@@ -396,7 +396,7 @@ export default function App() {
                 stars:{" "}
                 <a
                   className="underline hover:no-underline"
-                  href="/public/mill-house-parking-map.png"
+                  href="/mill-house-parking-map.png"
                 >
                   View Here
                 </a>
