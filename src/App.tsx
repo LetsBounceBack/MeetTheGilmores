@@ -165,13 +165,13 @@ export default function App() {
         <div className="absolute inset-0">
           <img
             src="/hero.png"
-            alt="Wedding venue"
-            className="w-full h-full object-cover"
+            alt="Lexi & Austin"
+            className="w-full h-full object-cover scale-105 object-[47%]"
           />
           <div className="absolute inset-0 bg-black/30"></div>
         </div>
 
-        <div className="relative z-10 text-center text-creme px-4 pt-32 md:pt-48">
+        <div className="relative z-10 text-center text-creme px-4 pt-64">
           <h1 className="font-serif text-6xl md:text-8xl mb-4">
             Lexi & Austin
           </h1>
@@ -351,12 +351,12 @@ export default function App() {
                 </h3>
               </div>
               <p className="text-creme mb-2">
-                We kindly ask guests to wear whatever they feel comfortable in
-                especailly if you'd like to dance.
+                We kindly ask guests to wear whatever they feel comfortable in,
+                especially if you'd like to dance.
               </p>
               <p className="text-creme mb-2">
                 Feel free to follow along with the color theme (Our website
-                colors)
+                colors).
               </p>
               <p className="text-creme font-bold">No white clothing, please.</p>
             </div>
@@ -488,12 +488,12 @@ export default function App() {
             {/* Food & Drinks */}
             <div className="bg-vintage p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-bold text-creme mb-2">
-                Will there be vegetarian/vegan/gluten-free options?
+                Dietary Accomodations?
               </h3>
               <p className="text-creme">
-                Yes! Our caterer will provide options for vegetarian, vegan, and
-                gluten-free guests. Please let us know any dietary restrictions
-                when you RSVP.
+                Yes! Our caterer can provide options for vegetarian, vegan, and
+                gluten-free guests. Please let us know any dietary accomodations
+                in advance when you RSVP.
               </p>
             </div>
 
