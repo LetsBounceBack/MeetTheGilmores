@@ -166,7 +166,7 @@ export default function App() {
           <img
             src="/hero.png"
             alt="Lexi & Austin"
-            className="w-full h-full object-cover scale-105 object-[47%]"
+            className="w-full h-full object-cover scale-105 object-[46%]"
           />
           <div className="absolute inset-0 bg-black/30"></div>
         </div>
@@ -252,8 +252,15 @@ export default function App() {
                 <strong>Venue:</strong> The Mill Street House
               </p>
               <p className="text-creme mb-2">
-                <strong>Address:</strong> 322 N Mill St, Lewisville, TX 75057
-                (hyperlink this)
+                <strong>Address:</strong>{" "}
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=322+N+Mill+St+Lewisville+TX+75057"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-creme underline hover:no-underline"
+                >
+                  322 N Mill St, Lewisville, TX 75057
+                </a>
               </p>
               <p className="text-creme mb-4">
                 <strong>Time:</strong> 5:30-8PM
@@ -385,8 +392,14 @@ export default function App() {
                 Parking
               </h3>
               <p className="text-creme">
-                Parking is available on-site and is free for all guests. (insert
-                map)
+                Please refer to the map for designated parking, indicated by the
+                stars:{" "}
+                <a
+                  className="underline hover:no-underline"
+                  href="/public/mill-house-parking-map.png"
+                >
+                  View Here
+                </a>
               </p>
             </div>
 
@@ -396,9 +409,8 @@ export default function App() {
                 Nearby Airport
               </h3>
               <p className="text-creme mb-2">
-                <strong>Closest Airport:</strong> DFW International
+                DFW International (About 20 minutes away)
               </p>
-              <p className="text-creme mb-4">About 20 minutes away</p>
             </div>
 
             <div className="bg-vintage p-8 rounded-lg shadow-sm">
@@ -409,7 +421,8 @@ export default function App() {
               <p className="text-creme mb-2">
                 There are many hotel options within the city of Lewisville, TX:{" "}
                 <a
-                  className="underline"
+                  className="underline hover:no-underline"
+                  target="_blank"
                   href="https://www.google.com/travel/search?q=hotels%20near%20lewisville%20texas&g2lb=4899571%2C4899572%2C4965990%2C72471280%2C72560029%2C72573224%2C72647020%2C72686036%2C72803964%2C72882230%2C73059275%2C73064764%2C100361027%2C121608706&hl=en-US&gl=us&cs=1&ssta=1&ts=CAESCgoCCAMKAggDEAAaHBIaEhQKBwjqDxAFGAsSBwjqDxAFGAwYATICEAAqBwoFOgNVU0Q&qs=CAE4BkIJEe6K1wKuq1ogQgkRlvwgsv0SJV1CCRGIj5v6-6khYFpWMlSqAVEQASoKIgZob3RlbHMoADIfEAEiG1OXrh-RTfiRXDKAqlt59P6W1vS1T2TI4vdzMTIgEAIiHGhvdGVscyBuZWFyIGxld2lzdmlsbGUgdGV4YXM&ap=aAE&ictx=111&ved=0CAAQ5JsGahcKEwiQsci92ayUAxUAAAAAHQAAAAAQDA"
                 >
                   View Here
@@ -488,12 +501,12 @@ export default function App() {
             {/* Food & Drinks */}
             <div className="bg-vintage p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-bold text-creme mb-2">
-                Dietary Accomodations?
+                Dietary accommodations?
               </h3>
               <p className="text-creme">
-                Yes! Our caterer can provide options for vegetarian, vegan, and
-                gluten-free guests. Please let us know any dietary accomodations
-                in advance when you RSVP.
+                Our caterer can provide options for vegetarian, vegan, and
+                gluten-free guests. Please let us know any dietary
+                accommodations in advance when you RSVP.
               </p>
             </div>
 
