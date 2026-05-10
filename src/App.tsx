@@ -166,7 +166,7 @@ export default function App() {
           <img
             src="/hero.png"
             alt="Lexi & Austin"
-            className="w-full h-full object-cover scale-105 object-[46%]"
+            className="w-full h-full object-cover object-[46%]"
           />
           <div className="absolute inset-0 bg-black/30"></div>
         </div>
