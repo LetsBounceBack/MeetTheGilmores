@@ -1,8 +1,6 @@
 import { useState } from "react";
 import {
   Heart,
-  Calendar,
-  MapPin,
   Gift,
   ChevronDown,
   Menu,
