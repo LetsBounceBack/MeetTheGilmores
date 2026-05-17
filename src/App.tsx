@@ -488,7 +488,7 @@ export default function App() {
                   Click Here
                 </a>
               </p>
-              <img src="/public/Venmo.jpeg" alt="venmo" className="pt-2" />
+              <img src="/Venmo.jpeg" alt="venmo" className="pt-2" />
             </div>
           </div>
         </div>
