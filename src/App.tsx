@@ -55,7 +55,7 @@ export default function App() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-2">
               <Heart className="w-5 h-5 text-mauve fill-mauve" />
-              <span className="font-serif text-xl text-creme">
+              <span className="parisienne-regular text-2xl text-creme">
                 Lexi & Austin
               </span>
             </div>
@@ -172,7 +172,7 @@ export default function App() {
         </div>
 
         <div className="relative z-10 text-center text-creme px-4 pt-64">
-          <h1 className="font-serif text-6xl md:text-8xl mb-4">
+          <h1 className="parisienne-regular text-6xl md:text-8xl mb-4">
             Lexi & Austin
           </h1>
           <div className="flex items-center justify-center gap-4 mb-6">
@@ -180,10 +180,10 @@ export default function App() {
             <Heart className="w-6 h-6 fill-creme" />
             <div className="h-px w-16 bg-white/50"></div>
           </div>
-          <p className="text-2xl md:text-3xl mb-2 uppercase">
-            we're getting married!
+          <p className="text-4xl mb-2 sirivennela-regular">
+            We're Getting Married!
           </p>
-          <p className="text-xl md:text-2xl text-creme">
+          <p className="text-4xl text-creme sirivennela-regular">
             10.08.26 | Lewisville, TX
           </p>
 
@@ -262,8 +262,11 @@ export default function App() {
                   322 N Mill St, Lewisville, TX 75057
                 </a>
               </p>
+              <p className="text-creme mb-2">
+                <strong>Date:</strong> October 8th, 2026
+              </p>
               <p className="text-creme mb-4">
-                <strong>Time:</strong> 5:30-8PM
+                <strong>Time:</strong> 5:30 PM - 8 PM
               </p>
 
               <div className="space-y-3 mt-6">
@@ -413,7 +416,7 @@ export default function App() {
               </p>
             </div>
 
-            <div className="bg-vintage p-8 rounded-lg shadow-sm">
+            <div className="bg-vintage col-span-2 justify-self-center w-full md:max-w-[calc(50%-12px)] p-8 text-creme rounded-lg shadow-sm">
               <House className="w-8 h-8 text-creme mb-4" />
               <h3 className="text-2xl font-serif text-creme mb-4 font-bold">
                 Nearby Hotels
@@ -452,23 +455,22 @@ export default function App() {
             <h3 className="text-2xl font-serif text-creme mb-4 font-bold">
               Where We're Registered
             </h3>
-            <p className="text-creme mb-6">
-              We are registered at [Registry Name]. You can find our registry by
-              clicking the button below.
+            <p className="text-creme">
+              You can find our registry on Amazon by clicking the button below.
             </p>
-            <button className="bg-vintage text-creme px-8 py-3 rounded-full transition-colors">
-              View Our Registry
-            </button>
+            <p className="text-creme text-sm md:px-24 py-2 mb-2">
+              If you would like to surprise us with a gift that isn't on our
+              registry, please feel free to do so! Just reach out if you need
+              our home address.
+            </p>
+            <a href="https://www.amazon.com/wedding/share/thegilmores26">
+              <button className="bg-vintage text-creme px-8 py-3 rounded-full transition-colors hover:bg-rust">
+                View Our Registry
+              </button>
+            </a>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-sage p-6 rounded-lg text-left">
-              <h4 className="text-creme mb-2 font-bold">Ship to Our Home</h4>
-              <p className="text-creme text-sm">
-                Absolutely! All registry gifts can be shipped straight to our
-                home for your convenience.
-              </p>
-            </div>
+          <div className="md:px-40">
             <div className="bg-sage p-6 rounded-lg text-left">
               <h4 className="font-bold text-creme mb-2">
                 Honeymoon & Cash Fund
@@ -476,8 +478,17 @@ export default function App() {
               <p className="text-creme text-sm">
                 We've set up a honeymoon/cash fund if you'd prefer to contribute
                 to our adventures or our house-buying goal instead of a physical
-                gift.
+                gift. <br />
+                <br />
+                We are set up on both Zelle (using our phone numbers) and Venmo!{" "}
+                <a
+                  href="https://venmo.com/u/Alexandrea-Keenan-Lee"
+                  className="underline hover:no-underline"
+                >
+                  Click Here
+                </a>
               </p>
+              <img src="/public/Venmo.jpeg" alt="venmo" className="pt-2" />
             </div>
           </div>
         </div>
@@ -601,9 +612,13 @@ export default function App() {
       <footer className="bg-sage text-creme py-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Heart className="w-8 h-8 text-mauve fill-mauve mx-auto mb-4" />
-          <p className="text-xl font-serif mb-2 text-creme">Lexi & Austin</p>
-          <p className="text-creme mb-4">10.08.26 | Lewisville, TX</p>
-          <p className="text-creme text-sm mt-8">
+          <p className="text-2xl parisienne-regular mb-2 text-creme">
+            Lexi & Austin
+          </p>
+          <p className="text-creme sirivennela-regular text-2xl">
+            10.08.26 | Lewisville, TX
+          </p>
+          <p className="text-creme text-sm mt-2">
             We can't wait to celebrate with you!
           </p>
         </div>

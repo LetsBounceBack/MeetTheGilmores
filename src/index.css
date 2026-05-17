@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-@import "tailwindcss";
-
 @theme {
   --color-rust: #561b20;
   --color-vintage: #8f574b;
@@ -10,4 +8,16 @@
   --color-mauve: #cba6b6;
   --color-creme: #f4f1de;
   --color-brown: #361113;
+}
+
+.parisienne-regular {
+  font-family: "Parisienne", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sirivennela-regular {
+  font-family: "Sirivennela", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
