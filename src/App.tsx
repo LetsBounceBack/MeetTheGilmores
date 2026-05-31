@@ -469,7 +469,7 @@ export default function App() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-12">
             <div className="bg-vintage p-8 rounded-lg shadow-sm">
               <Car className="w-8 h-8 text-creme mb-4" />
               <h3 className="text-2xl font-serif text-creme mb-4 font-bold">
@@ -497,7 +497,7 @@ export default function App() {
               </p>
             </div>
 
-            <div className="bg-vintage col-span-2 justify-self-center w-full md:max-w-[calc(50%-12px)] p-8 text-creme rounded-lg shadow-sm">
+            <div className="bg-vintage p-8 rounded-lg md:col-span-2">
               <House className="w-8 h-8 text-creme mb-4" />
               <h3 className="text-2xl font-serif text-creme mb-4 font-bold">
                 Nearby Hotels
