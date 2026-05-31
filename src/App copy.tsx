@@ -11,8 +11,6 @@ import {
   Car,
   Plane,
   House,
-  ChevronLeft,
-  ChevronRight,
 } from "lucide-react";
 
 import { useEffect } from "react";
@@ -47,73 +45,6 @@ export default function App() {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
-  };
-
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [touchStartX, setTouchStartX] = useState<number | null>(null);
-  const [touchEndX, setTouchEndX] = useState<number | null>(null);
-
-  const galleryImages = [
-    { src: "/gallery-1.jpg", alt: "Lexi & Austin" },
-    { src: "/gallery-2.jpg", alt: "Lexi & Austin" },
-    { src: "/gallery-3.jpg", alt: "Lexi & Austin" },
-    { src: "/gallery-4.jpg", alt: "Lexi & Austin" },
-    { src: "/gallery-5.jpg", alt: "Lexi & Austin" },
-    { src: "/gallery-6.jpg", alt: "Lexi & Austin" },
-    { src: "/gallery-7.jpg", alt: "Lexi & Austin" },
-    { src: "/gallery-8.jpg", alt: "Lexi & Austin" },
-    { src: "/gallery-9.jpg", alt: "Lexi & Austin" },
-    { src: "/gallery-10.jpg", alt: "Lexi & Austin" },
-    { src: "/gallery-11.jpg", alt: "Lexi & Austin" },
-    { src: "/gallery-12.jpg", alt: "Lexi & Austin" },
-    { src: "/gallery-13.jpg", alt: "Lexi & Austin" },
-    { src: "/gallery-14.jpg", alt: "Lexi & Austin" },
-  ];
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) =>
-      prev === galleryImages.length - 1 ? 0 : prev + 1,
-    );
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) =>
-      prev === 0 ? galleryImages.length - 1 : prev - 1,
-    );
-  };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 4000); // Changes slides every 4 seconds
-
-    return () => clearInterval(interval); // Clean up on unmount
-  }, [currentSlide]);
-
-  // --- NEW: Swipe Gestures for Mobile ---
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setTouchStartX(e.targetTouches[0].clientX);
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    setTouchEndX(e.targetTouches[0].clientX);
-  };
-
-  const handleTouchEnd = () => {
-    if (!touchStartX || !touchEndX) return;
-
-    const difference = touchStartX - touchEndX;
-    const swipeThreshold = 50; // Minimum distance in pixels to trigger swipe
-
-    if (difference > swipeThreshold) {
-      nextSlide(); // Swiped left
-    } else if (difference < -swipeThreshold) {
-      prevSlide(); // Swiped right
-    }
-
-    // Reset tracking variables
-    setTouchStartX(null);
-    setTouchEndX(null);
   };
 
   return (
@@ -160,12 +91,6 @@ export default function App() {
                 className="text-creme transform hover:text-mauve hover:translate-y-[-2px] transition-transform duration-200 ease-in-out"
               >
                 FAQ
-              </button>
-              <button
-                onClick={() => scrollToSection("gallery")}
-                className="text-creme transform hover:text-mauve hover:translate-y-[-2px] transition-transform duration-200 ease-in-out"
-              >
-                Gallery
               </button>
               <button
                 onClick={() => scrollToSection("rsvp")}
@@ -220,12 +145,6 @@ export default function App() {
                 className="block w-full text-left px-4 py-2 text-creme hover:bg-vintage rounded"
               >
                 FAQ
-              </button>
-              <button
-                onClick={() => scrollToSection("gallery")}
-                className="block w-full text-left px-4 py-2 text-creme hover:bg-vintage rounded"
-              >
-                Gallery
               </button>
               <button
                 onClick={() => scrollToSection("rsvp")}
@@ -656,84 +575,6 @@ export default function App() {
               <p className="text-creme">
                 Yes, please RSVP and limit it to only one additional member.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Image Gallery Slideshow Section */}
-      <section id="gallery" className="py-20 bg-creme">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="font-serif text-4xl md:text-5xl text-vintage mb-4 uppercase">
-              Our Gallery
-            </h2>
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <div className="h-px w-12 bg-vintage"></div>
-              <Heart className="w-5 h-5 text-vintage fill-vintage" />
-              <div className="h-px w-12 bg-vintage"></div>
-            </div>
-          </div>
-
-          {/* Carousel Wrapper with Touch Events */}
-          <div
-            className="relative group max-w-2xl mx-auto overflow-hidden rounded-xl shadow-lg bg-sage aspect-[4/3]"
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}
-            onTouchEnd={handleTouchEnd}
-          >
-            {/* Slides Container */}
-            <div
-              className="w-full h-full flex transition-transform duration-500 ease-out"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-            >
-              {galleryImages.map((image, index) => (
-                <div
-                  key={index}
-                  className="w-full h-full flex-shrink-0 bg-sage flex items-center justify-center"
-                >
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-full object-contain"
-                    loading="lazy"
-                  />
-                </div>
-              ))}
-            </div>
-
-            {/* Left Arrow Button (Hidden on touch devices, visible on hover/desktop) */}
-            <button
-              onClick={prevSlide}
-              className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/40 text-creme hover:bg-black/60 transition-colors duration-200 hidden md:block"
-              aria-label="Previous image"
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </button>
-
-            {/* Right Arrow Button (Hidden on touch devices, visible on hover/desktop) */}
-            <button
-              onClick={nextSlide}
-              className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/40 text-creme hover:bg-black/60 transition-colors duration-200 hidden md:block"
-              aria-label="Next image"
-            >
-              <ChevronRight className="w-6 h-6" />
-            </button>
-
-            {/* Indicator Dots */}
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-              {galleryImages.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    currentSlide === index
-                      ? "bg-creme scale-110"
-                      : "bg-creme/50"
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
             </div>
           </div>
         </div>
