@@ -347,7 +347,7 @@ export default function App() {
                 <strong>Date:</strong> October 8th, 2026
               </p>
               <p className="text-creme mb-4">
-                <strong>Time:</strong> 5:30 PM - 8 PM
+                <strong>Time:</strong> 6 PM - 9:30 PM
               </p>
 
               <div className="space-y-3 mt-6">
